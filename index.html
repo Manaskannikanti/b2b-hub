@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Workwise · Hub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <!-- HEADER — styled like Workwise landing chatbox -->
+    <header class="header">
+        <div class="logo-container">
+            <div class="logo-icon">
+                <div class="logo-tl"></div>
+                <div class="logo-tr"></div>
+                <div class="logo-bl"></div>
+                <div class="logo-br"></div>
+            </div>
+            <span class="logo-text">entomo</span>
+        </div>
+        <div class="header-search">
+            <div class="ww-search-icon">
+                <img src="workwise image.png" alt="Workwise" class="ww-search-logo" />
+            </div>
+            <input id="globalSearch" type="text" class="search-input" placeholder="Ask Workwise AI or search…"
+                autocomplete="off" />
+
+        </div>
+        <div class="header-right">
+            <button class="icon-btn" id="announcementsBtn">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" />
+                    <path d="M13.73 21a2 2 0 0 1-3.46 0" />
+                </svg>
+                <span class="notif-badge">3</span>
+            </button>
+            <div class="user-profile" id="profileBtn">
+                <div class="avatar">SA</div>
+                <div class="user-info">
+                    <span class="user-name">Sarah Ahmed</span>
+                    <span class="user-role">Senior UX Designer</span>
+                </div>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9" />
+                </svg>
+            </div>
+        </div>
+    </header>
+
+    <!-- SIDEBAR -->
+    <nav class="sidebar">
+        <div class="sidebar-group">
+            <button class="nav-btn active" aria-label="Home">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                    <polyline points="9 22 9 12 15 12 15 22" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </button>
+            <button class="nav-btn" aria-label="Analytics">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                    <line x1="18" y1="20" x2="18" y2="10" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" />
+                    <line x1="12" y1="20" x2="12" y2="4" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" />
+                    <line x1="6" y1="20" x2="6" y2="14" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                </svg>
+            </button>
+            <button class="nav-btn" aria-label="Network">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                    <circle cx="18" cy="5" r="2.5" stroke="currentColor" stroke-width="1.8" />
+                    <circle cx="6" cy="12" r="2.5" stroke="currentColor" stroke-width="1.8" />
+                    <circle cx="18" cy="19" r="2.5" stroke="currentColor" stroke-width="1.8" />
+                    <line x1="8.4" y1="13.4" x2="15.6" y2="17.6" stroke="currentColor" stroke-width="1.8"
+                        stroke-linecap="round" />
+                    <line x1="15.6" y1="6.4" x2="8.4" y2="10.6" stroke="currentColor" stroke-width="1.8"
+                        stroke-linecap="round" />
+                </svg>
+            </button>
+            <button class="nav-btn" aria-label="Security">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                    <rect x="5" y="11" width="14" height="10" rx="2" stroke="currentColor" stroke-width="1.8" />
+                    <path d="M8 11V7a4 4 0 0 1 8 0v4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+                </svg>
+            </button>
+        </div>
+        <div class="sidebar-group sidebar-group--bottom">
+            <button class="nav-btn" aria-label="Settings">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                    <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.8" />
+                    <path
+                        d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"
+                        stroke="currentColor" stroke-width="1.8" />
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- MAIN -->
+    <main class="hub-layout">
+
+        <!-- ─── CARD RAIL ─────────────────────────────────────────────── -->
+        <aside class="card-rail">
+
+            <!-- THINGS TO DO rail card — agent standby faces instead of dots -->
+            <article class="hub-card" data-module="todos" role="button" tabindex="0">
+                <div class="rail-status">
+                    <span class="rail-dot rail-dot--orange pulse-anim"></span>
+                    <span class="rail-status-text">4 waiting</span>
+                </div>
+                <h2 class="rail-title">Things to Do</h2>
+                <p class="rail-sub">Agents ready with decisions.</p>
+                <!-- Agent standby faces — replace dots -->
+                <div class="rail-agent-standby">
+                    <div class="ras-av" style="background:linear-gradient(135deg,#dbeafe,#bfdbfe)">
+                        <img src="agents/talent-atlas.png" alt="TalentAtlas"
+                            onerror="this.style.display='none';this.parentElement.innerHTML='<span style=\'font-size:7px;font-weight:800;color:#1d4ed8\'>TA</span>'" />
+                    </div>
+                    <div class="ras-av" style="background:linear-gradient(135deg,#dcfce7,#bbf7d0)">
+                        <img src="agents/goalforge.png" alt="GoalForge"
+                            onerror="this.style.display='none';this.parentElement.innerHTML='<span style=\'font-size:7px;font-weight:800;color:#15803d\'>GF</span>'" />
+                    </div>
+                    <div class="ras-av" style="background:linear-gradient(135deg,#fff7ed,#fed7aa)">
+                        <img src="agents/pulse360.png" alt="Pulse360"
+                            onerror="this.style.display='none';this.parentElement.innerHTML='<span style=\'font-size:7px;font-weight:800;color:#c2410c\'>P3</span>'" />
+                    </div>
+                    <div class="ras-av" style="background:linear-gradient(135deg,#ede9fe,#ddd6fe)">
+                        <img src="agents/growth-planner.png" alt="GrowthPlanner"
+                            onerror="this.style.display='none';this.parentElement.innerHTML='<span style=\'font-size:7px;font-weight:800;color:#5b13ec\'>GP</span>'" />
+                    </div>
+                    <span class="ras-label">on standby</span>
+                </div>
+            </article>
+
+            <article class="hub-card" data-module="coach" role="button" tabindex="0">
+                <div class="rail-status">
+                    <div class="rail-halo">
+                        <svg viewBox="0 0 36 36" width="36" height="36">
+                            <circle cx="18" cy="18" r="14" fill="none" stroke="rgba(255,255,255,0.07)"
+                                stroke-width="2" />
+                            <circle cx="18" cy="18" r="14" fill="none" stroke="#60a5fa" stroke-width="2"
+                                stroke-dasharray="66.6 21.4" transform="rotate(-90 18 18)" stroke-linecap="round" />
+                            <text x="18" y="22" text-anchor="middle" font-size="9.5" font-weight="700" fill="white"
+                                font-family="Inter">3.8</text>
+                        </svg>
+                    </div>
+                </div>
+                <h2 class="rail-title">Performance Coach</h2>
+                <p class="rail-sub">Craft skills and presentation gap holding you back.</p>
+            </article>
+
+            <article class="hub-card" data-module="insights" role="button" tabindex="0">
+                <div class="rail-status">
+                    <span class="rail-dot rail-dot--purple pulse-anim"></span>
+                    <span class="rail-status-text">3 new signals</span>
+                </div>
+                <h2 class="rail-title">AI Insights</h2>
+                <p class="rail-sub">Pulse360, GrowthPlanner, and GoalForge spotted patterns.</p>
+                <div class="rail-agent-faces">
+                    <div class="raf" style="background:linear-gradient(135deg,#fff7ed,#fed7aa)">
+                        <img src="agents/pulse360.png" alt="Pulse360"
+                            onerror="this.style.display='none';this.parentElement.innerHTML='<span style=\'font-size:7px;font-weight:800;color:#c2410c\'>P3</span>'" />
+                    </div>
+                    <div class="raf" style="background:linear-gradient(135deg,#ede9fe,#ddd6fe)">
+                        <img src="agents/growth-planner.png" alt="GrowthPlanner"
+                            onerror="this.style.display='none';this.parentElement.innerHTML='<span style=\'font-size:7px;font-weight:800;color:#5b13ec\'>GP</span>'" />
+                    </div>
+                    <div class="raf" style="background:linear-gradient(135deg,#dcfce7,#bbf7d0)">
+                        <img src="agents/goalforge.png" alt="GoalForge"
+                            onerror="this.style.display='none';this.parentElement.innerHTML='<span style=\'font-size:7px;font-weight:800;color:#15803d\'>GF</span>'" />
+                    </div>
+                </div>
+            </article>
+
+        </aside>
+
+        <!-- ─── STAGE ──────────────────────────────────────────────────── -->
+        <section class="hub-stage">
+
+            <!-- GREETING -->
+            <div class="greeting-state" id="greetingState">
+                <div class="greeting-orb greeting-orb--1"></div>
+                <div class="greeting-orb greeting-orb--2"></div>
+                <div class="greeting-body">
+                    <p class="greeting-eyebrow" id="greetingLabel">Good afternoon</p>
+                    <h1 class="greeting-headline" id="greetingName">Sarah.</h1>
+                    <p class="greeting-sub">Your agents have been busy overnight. Where do you want to start?</p>
+                    <div class="greeting-chips">
+                        <button class="gchip" data-target="todos"><span class="gchip-dot"
+                                style="background:#f97316"></span>4 things need you</button>
+                        <button class="gchip" data-target="coach"><span class="gchip-dot"
+                                style="background:#60a5fa"></span>Review my performance</button>
+                        <button class="gchip" data-target="insights"><span class="gchip-dot"
+                                style="background:#a78bfa"></span>See team signals</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ════════════════════════════════════════════════════════════
+           THINGS TO DO — UX Designer inbox
+      ════════════════════════════════════════════════════════════════ -->
+            <div class="module-panel" id="todos-panel" hidden>
+                <div class="inbox-header">
+                    <p class="inbox-eyebrow">4 agents · overnight</p>
+                    <h2 class="inbox-headline">Your design work is ready. Your call.</h2>
+                </div>
+
+                <div class="inbox-list">
+
+                    <div class="inbox-entry">
+                        <div class="inbox-attr">
+                            <div class="inbox-agent-avatar" style="background:linear-gradient(135deg,#dbeafe,#bfdbfe)">
+                                <img src="agents/talent-atlas.png" alt="TalentAtlas"
+                                    onerror="this.style.display='none';this.parentElement.innerHTML='<span style=\'font-size:9px;font-weight:800;color:#1d4ed8\'>TA</span>'" />
+                            </div>
+                            <div class="inbox-attr-text">
+                                <span class="inbox-agent-name">TalentAtlas</span>
+                                <span class="inbox-agent-cap">Role Intelligence</span>
+                            </div>
+                            <span class="inbox-badge inbox-badge--active">Active</span>
+                        </div>
+                        <h3 class="inbox-task">Synthesize findings from last week's user research sessions</h3>
+                        <p class="inbox-brief">I've pulled transcripts from all 6 participant sessions, tagged key pain
+                            points by theme, and mapped them to your current design hypotheses. There are 3 recurring
+                            patterns worth surfacing before the sprint review. Ready for your annotation and sign-off.
+                        </p>
+                        <a class="inbox-action">Review synthesis →</a>
+                    </div>
+
+                    <div class="inbox-rule"></div>
+
+                    <div class="inbox-entry">
+                        <div class="inbox-attr">
+                            <div class="inbox-agent-avatar" style="background:linear-gradient(135deg,#dcfce7,#bbf7d0)">
+                                <img src="agents/goalforge.png" alt="GoalForge"
+                                    onerror="this.style.display='none';this.parentElement.innerHTML='<span style=\'font-size:9px;font-weight:800;color:#15803d\'>GF</span>'" />
+                            </div>
+                            <div class="inbox-attr-text">
+                                <span class="inbox-agent-name">GoalForge</span>
+                                <span class="inbox-agent-cap">Goal Intelligence</span>
+                            </div>
+                            <span class="inbox-badge inbox-badge--due">Due Mar 15</span>
+                        </div>
+                        <h3 class="inbox-task">Q1 design OKR check-in — 2 goals need your update</h3>
+                        <p class="inbox-brief">Design System adoption is at 78% — above target. But "Reduce usability
+                            errors by 30%" needs a status note before the cross-functional review. I've pre-filled
+                            context from the last sprint retro. Just confirm or edit the summary.</p>
+                        <a class="inbox-action">Update OKRs →</a>
+                    </div>
+
+                    <div class="inbox-rule"></div>
+
+                    <div class="inbox-entry">
+                        <div class="inbox-attr">
+                            <div class="inbox-agent-avatar" style="background:linear-gradient(135deg,#fff7ed,#fed7aa)">
+                                <img src="agents/pulse360.png" alt="Pulse360"
+                                    onerror="this.style.display='none';this.parentElement.innerHTML='<span style=\'font-size:9px;font-weight:800;color:#c2410c\'>P3</span>'" />
+                            </div>
+                            <div class="inbox-attr-text">
+                                <span class="inbox-agent-name">Pulse360</span>
+                                <span class="inbox-agent-cap">Sentiment Analytics</span>
+                            </div>
+                            <span class="inbox-badge inbox-badge--overdue">Overdue</span>
+                        </div>
+                        <h3 class="inbox-task">Provide feedback on the mid-fidelity prototype from the mobile team</h3>
+                        <p class="inbox-brief">The mobile team submitted their checkout flow prototype 4 days ago
+                            flagged for your UX review. Three interaction patterns conflict with your design system
+                            guidelines. I've annotated the specific screens. They're waiting to move to high-fidelity.
+                        </p>
+                        <a class="inbox-action">Review prototype →</a>
+                    </div>
+
+                    <div class="inbox-rule"></div>
+
+                    <div class="inbox-entry">
+                        <div class="inbox-attr">
+                            <div class="inbox-agent-avatar" style="background:linear-gradient(135deg,#ede9fe,#ddd6fe)">
+                                <img src="agents/growth-planner.png" alt="GrowthPlanner"
+                                    onerror="this.style.display='none';this.parentElement.innerHTML='<span style=\'font-size:9px;font-weight:800;color:#5b13ec\'>GP</span>'" />
+                            </div>
+                            <div class="inbox-attr-text">
+                                <span class="inbox-agent-name">GrowthPlanner</span>
+                                <span class="inbox-agent-cap">IDP Engine</span>
+                            </div>
+                            <span class="inbox-badge inbox-badge--active">Active</span>
+                        </div>
+                        <h3 class="inbox-task">Approve the design leadership development path I built for you</h3>
+                        <p class="inbox-brief">I've drafted a 90-day plan to close your two identified gaps — design
+                            storytelling and stakeholder presentation — using a mix of LinkedIn Learning modules,
+                            internal shadowing, and one external workshop. Your manager has already been looped in.
+                            Approve and it activates.</p>
+                        <a class="inbox-action">Review &amp; approve plan →</a>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- ════════════════════════════════════════════════════════════
+           PERFORMANCE COACH — UX Designer, KPI + Skill combined
+      ════════════════════════════════════════════════════════════════ -->
+            <div class="module-panel" id="coach-panel" hidden>
+                <div class="coach-full-dark">
+                    <div class="coach-left">
+                        <div class="coach-agents">
+                            <div class="coach-agent-chip">
+                                <div class="coach-av" style="background:linear-gradient(135deg,#e0f2fe,#bae6fd)">
+                                    <img src="agents/insight360.png" alt="Insight360"
+                                        onerror="this.style.display='none';this.parentElement.innerHTML='<span style=\'font-size:8px;font-weight:800;color:#0369a1\'>I3</span>'" />
+                                </div>
+                                <span class="coach-agent-n">Insight360</span>
+                                <span class="coach-agent-v">analysed your performance</span>
+                            </div>
+                            <span class="coach-agent-sep">+</span>
+                            <div class="coach-agent-chip">
+                                <div class="coach-av" style="background:linear-gradient(135deg,#ede9fe,#ddd6fe)">
+                                    <img src="agents/growth-planner.png" alt="GrowthPlanner"
+                                        onerror="this.style.display='none';this.parentElement.innerHTML='<span style=\'font-size:8px;font-weight:800;color:#5b13ec\'>GP</span>'" />
+                                </div>
+                                <span class="coach-agent-n">GrowthPlanner</span>
+                                <span class="coach-agent-v">mapped your gaps</span>
+                            </div>
+                        </div>
+                        <div class="coach-score-display">
+                            <span class="score-giant">3.8</span><span class="score-max">/5</span>
+                        </div>
+                        <p class="coach-rank">Top 22% among UX Designers · Q1 2025</p>
+                        <p class="coach-verdict">"Your craft is strong — Figma, user research, and design systems are
+                            above benchmark. But design storytelling and stakeholder communication are limiting your
+                            influence at the senior level. Both are learnable skills. Let's close them now."</p>
+                        <div class="coach-breakdown">
+                            <div class="cbreak-item">
+                                <span class="cbreak-val">4.4</span>
+                                <div class="cbreak-bar">
+                                    <div style="width:88%;background:#34d399"></div>
+                                </div>
+                                <span class="cbreak-lbl">Craft</span>
+                            </div>
+                            <div class="cbreak-item">
+                                <span class="cbreak-val">4.1</span>
+                                <div class="cbreak-bar">
+                                    <div style="width:82%;background:#60a5fa"></div>
+                                </div>
+                                <span class="cbreak-lbl">Research</span>
+                            </div>
+                            <div class="cbreak-item">
+                                <span class="cbreak-val">2.8</span>
+                                <div class="cbreak-bar">
+                                    <div style="width:56%;background:#f87171"></div>
+                                </div>
+                                <span class="cbreak-lbl">Storytelling</span>
+                            </div>
+                            <div class="cbreak-item">
+                                <span class="cbreak-val">3.1</span>
+                                <div class="cbreak-bar">
+                                    <div style="width:62%;background:#fb923c"></div>
+                                </div>
+                                <span class="cbreak-lbl">Stakeholder</span>
+                            </div>
+                        </div>
+                        <div class="coach-cta-row">
+                            <button class="coach-cta">Build my growth plan →</button>
+                            <div class="coach-cta-attr">
+                                <div class="coach-av coach-av--sm"
+                                    style="background:linear-gradient(135deg,#ede9fe,#ddd6fe)">
+                                    <img src="agents/growth-planner.png" alt="GrowthPlanner"
+                                        onerror="this.style.display='none';this.parentElement.innerHTML='<span style=\'font-size:7px;font-weight:800;color:#5b13ec\'>GP</span>'" />
+                                </div>
+                                <span class="coach-cta-attr-text">GrowthPlanner will build this with you</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="coach-right">
+                        <div class="coach-right-attr">
+                            <div class="coach-av coach-av--sm"
+                                style="background:linear-gradient(135deg,#e0f2fe,#bae6fd)">
+                                <img src="agents/insight360.png" alt="Insight360"
+                                    onerror="this.style.display='none';this.parentElement.innerHTML='<span style=\'font-size:7px;font-weight:800;color:#0369a1\'>I3</span>'" />
+                            </div>
+                            <span class="coach-right-attr-label">Insight360 · UX Skill Radar</span>
+                        </div>
+                        <!-- Radar: 5 real UX skill axes -->
+                        <svg viewBox="0 0 260 260" class="radar-svg">
+                            <!-- Grid rings -->
+                            <polygon points="130,104 153.3,118.4 144.5,145.5 115.5,145.5 106.7,118.4 118.2,110.6"
+                                fill="none" stroke="rgba(255,255,255,0.04)" stroke-width="1" />
+                            <polygon points="130,78 173.2,105.5 157.8,165 102.2,165 86.8,105.5" fill="none"
+                                stroke="rgba(255,255,255,0.06)" stroke-width="1" />
+                            <polygon points="130,26 220,83.6 188,210 72,210 40,83.6" fill="none"
+                                stroke="rgba(255,255,255,0.04)" stroke-width="1" />
+                            <polygon points="130,52 196.6,94.5 172.9,187.5 87.1,187.5 63.4,94.5" fill="none"
+                                stroke="rgba(255,255,255,0.06)" stroke-width="1" />
+                            <!-- Axis lines (5 = Pentagon) -->
+                            <line x1="130" y1="130" x2="130" y2="26" stroke="rgba(255,255,255,0.07)" stroke-width="1" />
+                            <line x1="130" y1="130" x2="220" y2="83.6" stroke="rgba(255,255,255,0.07)"
+                                stroke-width="1" />
+                            <line x1="130" y1="130" x2="188" y2="210" stroke="rgba(248,113,113,0.25)"
+                                stroke-width="1" />
+                            <line x1="130" y1="130" x2="72" y2="210" stroke="rgba(251,146,60,0.25)" stroke-width="1" />
+                            <line x1="130" y1="130" x2="40" y2="83.6" stroke="rgba(255,255,255,0.07)"
+                                stroke-width="1" />
+                            <!-- Score polygon (4.4 craft=top, 4.1 research=top-right, 2.8 storytelling=bot-right, 3.1 stakeholder=bot-left, 4.0 systems=left) -->
+                            <polygon points="130,38 210.8,87.2 170.2,178.5 101.6,168.2 51.6,90"
+                                fill="rgba(96,165,250,0.05)" stroke="rgba(96,165,250,0.75)" stroke-width="1.5"
+                                stroke-linejoin="round" />
+                            <!-- Gap highlight -->
+                            <polygon points="130,130 170.2,178.5 101.6,168.2" fill="rgba(248,113,113,0.07)" />
+                            <!-- Dots -->
+                            <circle cx="130" cy="38" r="3.5" fill="#34d399" />
+                            <circle cx="210.8" cy="87.2" r="3.5" fill="#60a5fa" />
+                            <circle cx="170.2" cy="178.5" r="3.5" fill="#f87171" />
+                            <circle cx="101.6" cy="168.2" r="3.5" fill="#fb923c" />
+                            <circle cx="51.6" cy="90" r="3.5" fill="#34d399" />
+                            <!-- Labels with scores -->
+                            <text x="130" y="15" text-anchor="middle" font-size="9" fill="rgba(52,211,153,0.9)"
+                                font-family="Inter,sans-serif">Visual Craft · 4.4</text>
+                            <text x="232" y="88" text-anchor="start" font-size="9" fill="rgba(96,165,250,0.9)"
+                                font-family="Inter,sans-serif">Research · 4.1</text>
+                            <text x="200" y="222" text-anchor="middle" font-size="9" fill="rgba(248,113,113,0.9)"
+                                font-family="Inter,sans-serif">Storytelling · 2.8</text>
+                            <text x="60" y="222" text-anchor="middle" font-size="9" fill="rgba(251,146,60,0.9)"
+                                font-family="Inter,sans-serif">Stakeholder · 3.1</text>
+                            <text x="28" y="88" text-anchor="end" font-size="9" fill="rgba(52,211,153,0.9)"
+                                font-family="Inter,sans-serif">Systems · 4.0</text>
+                        </svg>
+                        <!-- 10 UX skills -->
+                        <div class="radar-skills">
+                            <div class="rskill">
+                                <span class="rskill-name">Figma &amp; Prototyping</span>
+                                <div class="rskill-bar">
+                                    <div style="width:92%;background:#34d399"></div>
+                                </div>
+                                <span class="rskill-score">4.6</span>
+                            </div>
+                            <div class="rskill">
+                                <span class="rskill-name">Visual Design</span>
+                                <div class="rskill-bar">
+                                    <div style="width:88%;background:#34d399"></div>
+                                </div>
+                                <span class="rskill-score">4.4</span>
+                            </div>
+                            <div class="rskill">
+                                <span class="rskill-name">User Research</span>
+                                <div class="rskill-bar">
+                                    <div style="width:82%;background:#60a5fa"></div>
+                                </div>
+                                <span class="rskill-score">4.1</span>
+                            </div>
+                            <div class="rskill">
+                                <span class="rskill-name">Design Systems</span>
+                                <div class="rskill-bar">
+                                    <div style="width:80%;background:#60a5fa"></div>
+                                </div>
+                                <span class="rskill-score">4.0</span>
+                            </div>
+                            <div class="rskill">
+                                <span class="rskill-name">Information Architecture</span>
+                                <div class="rskill-bar">
+                                    <div style="width:78%;background:#60a5fa"></div>
+                                </div>
+                                <span class="rskill-score">3.9</span>
+                            </div>
+                            <div class="rskill">
+                                <span class="rskill-name">Usability Testing</span>
+                                <div class="rskill-bar">
+                                    <div style="width:74%;background:#60a5fa"></div>
+                                </div>
+                                <span class="rskill-score">3.7</span>
+                            </div>
+                            <div class="rskill">
+                                <span class="rskill-name">Accessibility (WCAG)</span>
+                                <div class="rskill-bar">
+                                    <div style="width:68%;background:#60a5fa"></div>
+                                </div>
+                                <span class="rskill-score">3.4</span>
+                            </div>
+                            <div class="rskill rskill--gap">
+                                <svg viewBox="0 0 10 9" width="9" height="9" style="flex-shrink:0">
+                                    <polygon points="5,1 9.3,8.5 0.7,8.5" fill="none" stroke="#fb923c"
+                                        stroke-width="1.2" stroke-linejoin="round" />
+                                </svg>
+                                <span class="rskill-name" style="color:#fb923c">Stakeholder Communication</span>
+                                <div class="rskill-bar">
+                                    <div style="width:62%;background:#fb923c"></div>
+                                </div>
+                                <span class="rskill-score" style="color:#fb923c">3.1</span>
+                            </div>
+                            <div class="rskill rskill--gap">
+                                <svg viewBox="0 0 10 9" width="9" height="9" style="flex-shrink:0">
+                                    <polygon points="5,1 9.3,8.5 0.7,8.5" fill="none" stroke="#f87171"
+                                        stroke-width="1.2" stroke-linejoin="round" />
+                                </svg>
+                                <span class="rskill-name" style="color:#f87171">Design Storytelling</span>
+                                <div class="rskill-bar">
+                                    <div style="width:56%;background:#f87171"></div>
+                                </div>
+                                <span class="rskill-score" style="color:#f87171">2.8</span>
+                            </div>
+                            <div class="rskill rskill--gap">
+                                <svg viewBox="0 0 10 9" width="9" height="9" style="flex-shrink:0">
+                                    <polygon points="5,1 9.3,8.5 0.7,8.5" fill="none" stroke="#f87171"
+                                        stroke-width="1.2" stroke-linejoin="round" />
+                                </svg>
+                                <span class="rskill-name" style="color:#f87171">Executive Presentation</span>
+                                <div class="rskill-bar">
+                                    <div style="width:48%;background:#f87171"></div>
+                                </div>
+                                <span class="rskill-score" style="color:#f87171">2.4</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ════════════════════════════════════════════════════════════
+           AI INSIGHTS — UX Designer context, refined separators
+      ════════════════════════════════════════════════════════════════ -->
+            <div class="module-panel" id="insights-panel" hidden>
+                <div class="insight-feed">
+
+                    <div class="insight-block insight-block--large" style="--a:#7c3aed">
+                        <span class="iblock-cat">Where you left off</span>
+                        <h3 class="iblock-headline">You were mid-way through the checkout flow usability report</h3>
+                        <p class="iblock-body">You've completed annotations for 4 of 7 sessions. The three remaining
+                            have a high-severity interaction pattern flagged. The product team is expecting the report
+                            by Friday. I kept everything exactly where you left it.</p>
+                        <a class="iblock-link">Resume report →</a>
+                    </div>
+
+                    <div class="inbox-rule"></div>
+
+                    <div class="insight-block" style="--a:#ef4444">
+                        <div class="iblock-agent">
+                            <div class="iblock-av" style="background:linear-gradient(135deg,#fff7ed,#fed7aa)">
+                                <img src="agents/pulse360.png" alt="Pulse360"
+                                    onerror="this.style.display='none';this.parentElement.innerHTML='<span style=\'font-size:7px;font-weight:800;color:#c2410c\'>P3</span>'" />
+                            </div>
+                            <span class="iblock-agent-name">Pulse360</span>
+                            <span class="iblock-agent-verb">spotted a concern</span>
+                            <span class="iblock-cat">Team signal</span>
+                        </div>
+                        <h3 class="iblock-headline">Dev team feels design handoffs lack interaction specifications</h3>
+                        <p class="iblock-body">Sentiment from the last 4 sprint retrospectives shows "unclear handoffs"
+                            appearing consistently. I've mapped which screens lack motion specs and component notes. A
+                            short async walkthrough session would immediately resolve this pattern.</p>
+                        <a class="iblock-link">See the gaps →</a>
+                    </div>
+
+                    <div class="inbox-rule"></div>
+
+                    <div class="insight-block" style="--a:#22c55e">
+                        <div class="iblock-agent">
+                            <div class="iblock-av" style="background:linear-gradient(135deg,#dcfce7,#bbf7d0)">
+                                <img src="agents/goalforge.png" alt="GoalForge"
+                                    onerror="this.style.display='none';this.parentElement.innerHTML='<span style=\'font-size:7px;font-weight:800;color:#15803d\'>GF</span>'" />
+                            </div>
+                            <span class="iblock-agent-name">GoalForge</span>
+                            <span class="iblock-agent-verb">flagged an opportunity</span>
+                            <span class="iblock-cat">Opportunity</span>
+                        </div>
+                        <h3 class="iblock-headline">Leading the Design System refresh could be your next differentiator
+                        </h3>
+                        <p class="iblock-body">The Q2 roadmap includes a component library overhaul. No senior designer
+                            has claimed ownership. Based on your skills and OKRs, this aligns perfectly with where you
+                            want to grow. Ownership of this would be a strong case for promotion-level impact.</p>
+                        <a class="iblock-link">Explore this →</a>
+                    </div>
+
+                    <div class="inbox-rule"></div>
+
+                    <div class="insight-block insight-block--large" style="--a:#f97316">
+                        <div class="iblock-agent">
+                            <div class="iblock-av" style="background:linear-gradient(135deg,#ede9fe,#ddd6fe)">
+                                <img src="agents/growth-planner.png" alt="GrowthPlanner"
+                                    onerror="this.style.display='none';this.parentElement.innerHTML='<span style=\'font-size:7px;font-weight:800;color:#5b13ec\'>GP</span>'" />
+                            </div>
+                            <span class="iblock-agent-name">GrowthPlanner</span>
+                            <span class="iblock-agent-verb">flagged this for you</span>
+                            <span class="iblock-cat">Action needed</span>
+                        </div>
+                        <h3 class="iblock-headline">Design storytelling and executive presentation have no development
+                            plan</h3>
+                        <p class="iblock-body">These two skills were flagged in your last review and again in this
+                            quarter's calibration. Neither has a structured learning path. Together they're the only
+                            thing standing between you and a Staff Designer title. I've drafted a 8-week sprint plan
+                            using internal workshops, a presentation skills course, and two shadowing sessions with your
+                            design director. It's done. You just need to activate it.</p>
+                        <a class="iblock-link">Activate growth plan →</a>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <!-- WORKWISE CHAT WIDGET -->
+    <div class="ww-widget" id="wwWidget">
+        <div class="ww-header">
+            <div class="ww-icon"><svg viewBox="0 0 20 20" fill="none" width="14" height="14">
+                    <path
+                        d="M10 2C6.134 2 3 5.134 3 9c0 2.39 1.198 4.5 3.024 5.777L5.5 18l3.272-1.636A7.03 7.03 0 0010 16c3.866 0 7-3.134 7-7s-3.134-7-7-7z"
+                        fill="#fff" />
+                </svg></div>
+            <div>
+                <p class="ww-name">Workwise AI</p>
+                <p class="ww-status">● Online</p>
+            </div>
+            <button class="ww-close" id="wwClose"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="13" height="13">
+                    <line x1="18" y1="6" x2="6" y2="18" />
+                    <line x1="6" y1="6" x2="18" y2="18" />
+                </svg></button>
+        </div>
+        <div class="ww-body" id="wwBody">
+            <div class="ww-msg ww-msg--bot">
+                <p>Hey Sarah 👋 Ask me anything about your design work, team, or performance.</p>
+            </div>
+        </div>
+        <div class="ww-foot">
+            <input type="text" class="ww-input" id="wwInput" placeholder="Ask anything…" />
+            <button class="ww-send" id="wwSend"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="13" height="13">
+                    <line x1="22" y1="2" x2="11" y2="13" />
+                    <polygon points="22 2 15 22 11 13 2 9 22 2" />
+                </svg></button>
+        </div>
+    </div>
+    <!-- WORKWISE LOGO FAB (bottom right) -->
+    <button class="ww-fab" id="wwFab">
+        <img src="workwise image.png" alt="Workwise" class="ww-fab-logo" />
+    </button>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
